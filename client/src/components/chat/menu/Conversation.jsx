@@ -2,12 +2,12 @@
 import { AccountContext } from '../../context/AccountProvider';
 import { styled, Box, Typography } from "@mui/material";
 import { setConversation } from '../../../service/api';
-//import { UserContext } from '../../../context/UserProvider';
+
 import { useContext, useState, useEffect } from 'react';
 import { formatDate } from '../../../utils/common-utils';
 import { getConversation } from '../../../service/api';
 import { emptyProfilePicture } from '../../../constants/data';
-//import { AccountContext } from '../../../context/AccountProvider';
+
 
 const Component = styled(Box)`
     height: 50px;
@@ -60,11 +60,7 @@ const Conversation = ({ user }) => {
         await setConversation({ senderId: account.sub, receiverId: user.sub })
     }
 
-    // const getUser = async () => {
-    //     setPerson(user);
-    //     await setConversation({ senderId: account.sub, receiverId: user.sub });
-    // }
-
+   
     return (
         <Component onClick={() => getUser()}>
             <Box >
